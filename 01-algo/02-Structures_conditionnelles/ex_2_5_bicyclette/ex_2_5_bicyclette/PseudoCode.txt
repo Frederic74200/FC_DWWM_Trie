@@ -1,0 +1,155 @@
+﻿
+Ennoncé ----------------------------------------------------------------------------------------------------
+
+Réalisez l’algorithme et le programme correspondant au texte ci-dessous :
+
+S’il fait beau demain, j’irai faire une balade à bicyclette.
+
+Je n’ai pas utilisé ma bicyclette depuis plusieurs mois, peut-être n’est-elle plus en parfait état de fonctionnement.
+
+Si c’est le cas, je passerai chez le garagiste avant la balade. J’espère que les réparations seront immédiates sinon je devrai renoncer à la balade en bicyclette. Comme je veux de toute façon profiter du beau temps, si mon vélo n’est pas utilisable, j’irai à pied jusqu’à l’étang pour cueillir les joncs.
+
+S’il ne fait pas beau, je consacrerai ma journée à la lecture. J’aimerais relire le 1er tome de Game of Thrones. Je pense posséder ce livre, il doit être dans la bibliothèque du salon.
+
+Si je ne le retrouve pas, j’irai l’emprunter à la bibliothèque municipale. Si le livre n’est pas disponible, j’emprunterai un roman policier.
+
+Je rentrerai ensuite directement à la maison.
+
+Dès que j’aurai le livre qui me convient, je m’installerai confortablement dans un fauteuil et je me plongerai dans la lecture.
+
+
+
+
+Pseudo Code ----------------------------------------------------------------------------------------------------------------
+
+
+
+VARIABLES
+
+ilFaitBeau est un booléen
+bicycletteOK est un booléen
+delaiGraragisteOk est un booléen
+livreGOTdansBibliothequeSalon est un booléen
+livreGOTaBibliothequeMunicipale est un booléen
+
+ouiNon est une chaîne de caractère
+
+
+TRAITEMENT
+
+écrire "Que vais-je faire demain ? "
+
+
+écrire "Est-ce qu'il fera beau demain ?"
+		"Tapez o pour oui ou sur une autre touche pour non"
+Lire ouiNon
+
+		SI ouiNon == "o"
+			ALORS ilFaitBeau <-- vrai
+		SINON 
+			ilFaitBeau <-- faux
+
+
+
+	SI ilFaitBeau == vrai
+	|	ALORS 
+	|
+	|	écrire "Ma bicyclette est-elle en êtat de fonctionnement ?"
+	|				"Tapez o pour oui ou une autre touche pour non"
+	|	lire ouiNon
+	|		
+	|				| SI ouiNon == "o"
+	|				|	ALORS bicycletteOK <-- vrai
+	|				| SINON 
+	|				|	bicycletteOK <-- faux
+	|				| FIN SI
+	|
+	|		| SI bicycletteOK == faux      
+	|		|	 ALORS 
+	|		|		
+	|		|		écrire "J'emmènerai ma bicuclette chez le garagiste."
+	|		|
+	|		|		écrir|e "Le garaististe resparera t-il ma bicuclette immédiatement ?"
+	|		|				"Tapez o pour oui ou une autre touche pour non"
+	|		|				lire ouiNon
+	|		|
+	|		|				| SI ouiNon == "o"
+	|		|				|	ALORS delaiGraragisteOk <-- vrai
+	|		|				| SINON 
+	|		|				|	delaiGraragisteOk <-- faux
+	|		|				| FIN SI
+	|		|
+	|		|
+	|		|			| SI delaiGraragisteOk == faux
+	|		|			|	ALORS écrire "J’irai à pied jusqu’à l’étang pour cueillir les joncs."
+	|		|			| SINON
+	|		|			|	bicycletteOK = vrai
+	|		|			| FIN SI
+	|		|
+	|		| FIN SI
+	|
+	|
+	|		| SI bicycletteOK = vrai
+	|		|	ALORS écrire "J’irai faire une balade à bicyclette."
+	|		| FIN SI
+	|		
+	| 	
+	|
+	SINON 
+	|	ALORS
+	|		écrire "J’aimerais relire le 1er tome de Game of Thrones."
+	|		
+	|		écrir|e "Le livre Game Of Trhrones se trouve t-il dans la bibliothèque du salon ?"  <<<<<<<<<<<<<<<<<<<<
+	|				"Tapez o pour oui ou une autre touche pour non"
+	|		lire ouiNon
+	|
+	|				| SI ouiNon == "o"
+	|				|	ALORS livreGOTdansBibliothequeSalon <-- vrai
+	|				| SINON 
+	|				|	livreGOTdansBibliothequeSalon <-- faux
+	|				|FIN SI
+	|
+	|	
+	|		| SI livreGOTdansBibliothequeSalon == faux
+	|		|	ALORS 
+	|		|		 écrire "J'irai à la bibliothèque municipale."
+	|		|		
+	|		|		 écrir|e "Le livre Game Of Trhrones est-il disponible à la bibliothèque municipale ?"
+	|		|					"Tapez o pour oui ou une autre touche pour non"
+	|		|		 lire ouiNon
+	|		|		
+	|		|				| SI ouiNon == "o"
+	|		|				|	ALORS livreGOTaBibliothequeMunicipale <-- vrai
+	|		|				| SINON 
+	|		|				|	livreGOTaBibliothequeMunicipale <-- faux
+	|		|				|FIN SI
+	|		|		
+	|		|				| SI livreGOTaBibliothequeMunicipale == faux
+	|		|				| ALORS 
+	|		|				|	écrire "j’emprunterai un roman policier."
+	|		|				| SINON 
+	|		|				|	livreGOTdansBibliothequeSalon
+	|		|				| FIN SI
+	|		|
+	|		|	écrire "Je rentrerai ensuite directement à la maison."
+	|		|
+	|		FIN SI
+	|
+	|	
+	|		|  SI livreGOTdansBibliothequeSalon == VRAI
+	|		|  ALORS
+	|		|	écrire "Je m’installerai confortablement dans un fauteuil et je me plongerai dans la lecture."
+	|		| FIN SI
+	|
+	FIN SI
+
+
+FIN TRAITEMENT
+
+
+
+FIN PROGRAMME
+
+
+
+
